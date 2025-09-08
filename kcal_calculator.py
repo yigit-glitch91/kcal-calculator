@@ -1,20 +1,19 @@
-# Erkekler için bazal metabolizma hızı = 66.5 + (13.75 x vücut ağırlığınız (kg)) + (5 x boyunuz (cm.)) - (6.77 x yaş)
-# Kadınlar için bazal metabolizma hızı = 655.1 + (9.56 x vücut ağırlığınız (kg)) + (1.85 x boyunuz (cm.)) - (4.67 x yaş)
-print("\nKalori hesaplama programına hoşgeldiniz!\n")
+print("\nWelcome to calorie calculator!!\n")
 
-cinsiyet = input("Cinsiyetinizi yazın: ").lower()
-kilo = float(input("Kilonuzu yazın: "))
-boy = float(input("Boyunuzu cm cinsinden yazın: "))
-yaş = float(input("Yaşınızı girin: "))
+gender = input("Your gender(Male/Female): ").lower()
+weight = float(input("Your weight: "))
+height = float(input("Your height: "))
+age = float(input("Your age: "))
 
-if(cinsiyet == "erkek"):{
-    print("vücudunuzun bazal metobolizma hızı: " + str(66.5 + (13.75 * kilo) + (5 * boy) - (6.77 * yaş)) + " kcal")
+if(cinsiyet == "male"):{
+    print("Your metabolism speed is: " + str(66.5 + (13.75 * weight) + (5 * height) - (6.77 * age)) + " kcal")
 }
     
-elif(cinsiyet == "kadın"):{
-    print("vücudunuzun bazal metobolizma hızı: " + str(655.1 + (9.56 * kilo) + (1.85 * boy) - (4.67 * yaş)) + " kcal")
+elif(cinsiyet == "female"):{
+    print("Your metabolism speed is:  " + str(655.1 + (9.56 * weight) + (1.85 * height) - (4.67 * age)) + " kcal")
 }
     
 else:{
-    print("Lütfen cinsiyetinizi hepsi küçük harf ile ve doğru yazdığınızdan emin olun...")
+    print("Something is wrong. Please try again...")
 }
+
